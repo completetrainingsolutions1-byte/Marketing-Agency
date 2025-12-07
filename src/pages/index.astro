@@ -1,5 +1,6 @@
 ---
-
+const title = "Customer Experience Automation & Retention Marketing Consultant | Marketing Automation Expert";
+const description = "Transform your business with predictable revenue systems and automated retention marketing. Expert marketing automation consultant specializing in small business retention solutions.";
 ---
 
 <html lang="en">
@@ -8,9 +9,280 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+				line-height: 1.6;
+				color: #333;
+			}
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+			header {
+				background: #1a1a2e;
+				color: white;
+				padding: 1rem 0;
+			}
+			nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			.logo {
+				font-size: 1.5rem;
+				font-weight: bold;
+			}
+			nav ul {
+				display: flex;
+				list-style: none;
+				gap: 2rem;
+				flex-wrap: wrap;
+			}
+			nav a {
+				color: white;
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+			nav a:hover {
+				color: #4a90e2;
+			}
+			.hero {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				padding: 5rem 0;
+				text-align: center;
+			}
+			.hero h1 {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+			}
+			.hero p {
+				font-size: 1.25rem;
+				margin-bottom: 2rem;
+			}
+			.cta-button {
+				display: inline-block;
+				background: #4a90e2;
+				color: white;
+				padding: 1rem 2rem;
+				text-decoration: none;
+				border-radius: 5px;
+				font-weight: bold;
+				transition: background 0.3s;
+			}
+			.cta-button:hover {
+				background: #357abd;
+			}
+			.section {
+				padding: 4rem 0;
+			}
+			.section-title {
+				text-align: center;
+				font-size: 2rem;
+				margin-bottom: 3rem;
+				color: #1a1a2e;
+			}
+			.services-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+				margin-bottom: 2rem;
+			}
+			.service-card {
+				background: white;
+				padding: 2rem;
+				border-radius: 8px;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+				transition: transform 0.3s, box-shadow 0.3s;
+			}
+			.service-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+			}
+			.service-card h3 {
+				color: #667eea;
+				margin-bottom: 1rem;
+			}
+			.service-card a {
+				color: #4a90e2;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			.solutions-section {
+				background: #f8f9fa;
+			}
+			.value-props {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+				margin-top: 2rem;
+			}
+			.value-prop {
+				text-align: center;
+			}
+			.value-prop h3 {
+				color: #667eea;
+				margin-bottom: 0.5rem;
+			}
+			footer {
+				background: #1a1a2e;
+				color: white;
+				padding: 2rem 0;
+				text-align: center;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<header>
+			<div class="container">
+				<nav>
+					<div class="logo">Marketing Automation Expert</div>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/services/crm-marketing-automation">Services</a></li>
+						<li><a href="/solutions/fix-low-client-retention">Solutions</a></li>
+						<li><a href="/blog/customer-lifecycle-automation-guide">Blog</a></li>
+						<li><a href="/case-studies">Case Studies</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="hero">
+			<div class="container">
+				<h1>Customer Experience Automation & Retention Marketing Consultant</h1>
+				<p>Build Predictable Revenue Systems with Marketing Automation That Actually Works</p>
+				<a href="#contact" class="cta-button">Get Your Free Strategy Session</a>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="section-title">Transform Your Business with Expert Marketing Automation</h2>
+				<div class="value-props">
+					<div class="value-prop">
+						<h3>🎯 Predictable Revenue</h3>
+						<p>Stop guessing and start growing with automated retention systems that deliver consistent results</p>
+					</div>
+					<div class="value-prop">
+						<h3>⚡ Marketing Automation</h3>
+						<p>Save 20+ hours per week with intelligent workflows that nurture and convert automatically</p>
+					</div>
+					<div class="value-prop">
+						<h3>💰 Small Business Focused</h3>
+						<p>Enterprise-level retention solutions designed specifically for growing businesses</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="section-title">Our Services</h2>
+				<div class="services-grid">
+					<div class="service-card">
+						<h3>CRM & Marketing Automation</h3>
+						<p>Build powerful automated marketing workflows that work 24/7. Platform integrations, AI-enabled CRM workflows, and martech automation services.</p>
+						<p><a href="/services/crm-marketing-automation">Learn More →</a></p>
+					</div>
+					<div class="service-card">
+						<h3>Customer Retention Systems</h3>
+						<p>Stop losing customers with proven automated retention marketing strategies. Increase customer lifetime value and build predictable revenue.</p>
+						<p><a href="/services/customer-retention-systems">Learn More →</a></p>
+					</div>
+					<div class="service-card">
+						<h3>Automated Customer Communication</h3>
+						<p>Engage customers automatically with personalized messaging systems. AI customer communication tools and automated nurture sequences.</p>
+						<p><a href="/services/automated-customer-communication">Learn More →</a></p>
+					</div>
+					<div class="service-card">
+						<h3>Customer Onboarding & Experience</h3>
+						<p>Create consistent, exceptional customer experiences from day one. Fix inconsistent customer experience with intelligent automation.</p>
+						<p><a href="/services/customer-onboarding-optimization">Learn More →</a></p>
+					</div>
+					<div class="service-card">
+						<h3>Revenue Growth Automation</h3>
+						<p>Boost customer repeat sales with automated upsell, referral, and review generation systems. Maximize profit with customer ascension.</p>
+						<p><a href="/services/revenue-growth-automation">Learn More →</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section solutions-section">
+			<div class="container">
+				<h2 class="section-title">Common Problems We Solve</h2>
+				<div class="services-grid">
+					<div class="service-card">
+						<h3>❌ Losing Customers?</h3>
+						<p>Stop the bleeding and fix low client retention with proven systems that reduce customer churn and reactivate lost clients.</p>
+						<p><a href="/solutions/fix-low-client-retention">Fix This Now →</a></p>
+					</div>
+					<div class="service-card">
+						<h3>📉 Low Response Rates?</h3>
+						<p>Improve customer response rates and increase customer loyalty with high-response marketing automation strategies.</p>
+						<p><a href="/solutions/improve-customer-response-rates">Get Better Results →</a></p>
+					</div>
+					<div class="service-card">
+						<h3>🔄 Need More Repeat Business?</h3>
+						<p>Learn how to increase repeat business and improve cash flow with customer ascension systems and predictable revenue frameworks.</p>
+						<p><a href="/solutions/increase-repeat-business">Grow Revenue →</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="section-title">Latest Insights</h2>
+				<div class="services-grid">
+					<div class="service-card">
+						<h3>Customer Lifecycle Automation Guide</h3>
+						<p>The complete guide to customer journey optimization and automated customer engagement.</p>
+						<p><a href="/blog/customer-lifecycle-automation-guide">Read Guide →</a></p>
+					</div>
+					<div class="service-card">
+						<h3>Why Customers Don't Come Back</h3>
+						<p>Discover the real reasons you're losing customers and how to fix it.</p>
+						<p><a href="/blog/why-customers-dont-come-back">Learn More →</a></p>
+					</div>
+					<div class="service-card">
+						<h3>AI Automation for Small Business</h3>
+						<p>Complete guide to AI customer communication tools and intelligent customer experience systems.</p>
+						<p><a href="/blog/ai-automation-small-business-guide">Explore AI →</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" style="background: #667eea; color: white;">
+			<div class="container" style="text-align: center;">
+				<h2 style="color: white; margin-bottom: 1rem;">Ready to Build Predictable Revenue?</h2>
+				<p style="font-size: 1.25rem; margin-bottom: 2rem;">Let's create a custom retention marketing system for your business</p>
+				<a href="#contact" class="cta-button">Schedule Free Consultation</a>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<p>&copy; 2024 Marketing Automation Expert. All rights reserved.</p>
+				<p style="margin-top: 1rem;">
+					<a href="/services/crm-marketing-automation" style="color: white; margin: 0 1rem;">Services</a>
+					<a href="/solutions/fix-low-client-retention" style="color: white; margin: 0 1rem;">Solutions</a>
+					<a href="/blog/customer-lifecycle-automation-guide" style="color: white; margin: 0 1rem;">Blog</a>
+					<a href="/case-studies" style="color: white; margin: 0 1rem;">Case Studies</a>
+				</p>
+			</div>
+		</footer>
 	</body>
 </html>
