@@ -6,7 +6,7 @@ const description = "Fix inconsistent customer experience with automated custome
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<title>{title}</title>
 		<meta name="description" content={description} />
@@ -16,7 +16,8 @@ const description = "Fix inconsistent customer experience with automated custome
 			.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 			header { background: #1a1a2e; color: white; padding: 1rem 0; }
 			nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-			.logo { font-size: 1.5rem; font-weight: bold; }
+			.logo { display: flex; align-items: center; }
+			.logo img { height: 60px; width: auto; }
 			nav ul { display: flex; list-style: none; gap: 2rem; flex-wrap: wrap; }
 			nav a { color: white; text-decoration: none; }
 			nav a:hover { color: #4a90e2; }
@@ -41,7 +42,9 @@ const description = "Fix inconsistent customer experience with automated custome
 		<header>
 			<div class="container">
 				<nav>
-					<div class="logo">Marketing Automation Expert</div>
+					<a href="/" class="logo">
+						<img src="/profitflow-logo.png" alt="Profitflow Marketing Automation" />
+					</a>
 					<ul>
 						<li><a href="/">Home</a></li>
 						<li><a href="/services/crm-marketing-automation">Services</a></li>

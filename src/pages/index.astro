@@ -6,7 +6,7 @@ const description = "Transform your business with predictable revenue systems an
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -39,8 +39,12 @@ const description = "Transform your business with predictable revenue systems an
 				flex-wrap: wrap;
 			}
 			.logo {
-				font-size: 1.5rem;
-				font-weight: bold;
+				display: flex;
+				align-items: center;
+			}
+			.logo img {
+				height: 60px;
+				width: auto;
 			}
 			nav ul {
 				display: flex;
@@ -146,7 +150,9 @@ const description = "Transform your business with predictable revenue systems an
 		<header>
 			<div class="container">
 				<nav>
-					<div class="logo">Marketing Automation Expert</div>
+					<a href="/" class="logo">
+						<img src="/profitflow-logo.png" alt="Profitflow Marketing Automation" />
+					</a>
 					<ul>
 						<li><a href="/">Home</a></li>
 						<li><a href="/services/crm-marketing-automation">Services</a></li>
