@@ -60,6 +60,40 @@ const description = "Save time and money while increasing ROI and customer lifet
 			nav a:hover {
 				color: #00A8E0;
 			}
+		nav li {
+			position: relative;
+		}
+		.dropdown {
+			position: relative;
+		}
+		.dropdown-menu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background: #1a2332;
+			min-width: 280px;
+			padding: 0.5rem 0;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+			z-index: 1000;
+			margin-top: 0.5rem;
+		}
+		.dropdown:hover .dropdown-menu {
+			display: block;
+		}
+		.dropdown-menu li {
+			list-style: none;
+		}
+		.dropdown-menu a {
+			display: block;
+			padding: 0.75rem 1.5rem;
+			color: white;
+			white-space: nowrap;
+		}
+		.dropdown-menu a:hover {
+			background: #2a3342;
+			color: #00A8E0;
+		}
 			.hero {
 				background: linear-gradient(135deg, #004D6D 0%, #00A8E0 100%);
 				color: white;
@@ -155,7 +189,14 @@ const description = "Save time and money while increasing ROI and customer lifet
 					</a>
 					<ul>
 						<li><a href="/">Home</a></li>
-						<li><a href="/services/crm-marketing-automation">Services</a></li>
+					<li class="dropdown">
+						<a href="#">Services</a>
+						<ul class="dropdown-menu">
+							<li><a href="/services/crm-marketing-automation">Custom Automated Workflows</a></li>
+							<li><a href="/services/customer-retention-systems">CRM-Based Automated Workflows</a></li>
+							<li><a href="/services/automated-customer-communication">Custom AI Agents</a></li>
+						</ul>
+					</li>
 						<li><a href="/solutions/fix-low-client-retention">Solutions</a></li>
 						<li><a href="/blog/customer-lifecycle-automation-guide">Blog</a></li>
 						<li><a href="/case-studies">Case Studies</a></li>
