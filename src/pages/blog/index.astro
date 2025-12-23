@@ -1,0 +1,337 @@
+---
+const title = "Blog | Profitflow Automation Agency";
+const description = "Learn how to automate your business, increase customer retention, and grow revenue with our expert guides on automation, AI agents, and CRM systems.";
+
+// Blog posts data
+const blogPosts = [
+	{
+		title: "AI Automation for Small Business Guide",
+		slug: "ai-automation-small-business-guide",
+		excerpt: "Complete guide to AI automation for small business. Learn about AI agents, customer communication automation, and intelligent workflows that save 20+ hours per week.",
+		date: "2024-12-01",
+		featured: true
+	},
+	{
+		title: "Customer Lifecycle Automation Guide",
+		slug: "customer-lifecycle-automation-guide",
+		excerpt: "The complete guide to customer journey optimization and automated customer engagement. Learn how to automate every stage of the customer lifecycle.",
+		date: "2024-11-28"
+	},
+	{
+		title: "Small Business Marketing Systems",
+		slug: "small-business-marketing-systems",
+		excerpt: "Complete guide to business process automation for small businesses. Build automated marketing systems that generate leads and nurture customers on autopilot.",
+		date: "2024-11-25"
+	},
+	{
+		title: "Why Customers Don't Come Back",
+		slug: "why-customers-dont-come-back",
+		excerpt: "Discover the real reasons you're losing customers and how to fix it with automated retention systems that reduce churn and increase repeat purchases.",
+		date: "2024-11-20"
+	},
+	{
+		title: "How to Increase Customer Lifetime Value",
+		slug: "increase-customer-lifetime-value",
+		excerpt: "Learn proven strategies to increase customer lifetime value through CRM automation, retention systems, and automated customer engagement.",
+		date: "2024-11-15"
+	}
+];
+
+const featuredPost = blogPosts.find(post => post.featured);
+const otherPosts = blogPosts.filter(post => !post.featured);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+				line-height: 1.6;
+				color: #333;
+			}
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+			header {
+				background: #1a2332;
+				color: white;
+				padding: 1rem 0;
+			}
+			nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			.logo {
+				display: flex;
+				align-items: center;
+			}
+			.logo img {
+				height: 60px;
+				width: auto;
+			}
+			nav ul {
+				display: flex;
+				list-style: none;
+				gap: 2rem;
+				flex-wrap: wrap;
+			}
+			nav a {
+				color: white;
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+			nav a:hover {
+				color: #00A8E0;
+			}
+			nav li {
+				position: relative;
+			}
+			.dropdown {
+				position: relative;
+			}
+			nav .dropdown-menu {
+				display: none !important;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background: #1a2332;
+				min-width: 280px;
+				padding: 0.5rem 0;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+				z-index: 1000;
+				flex-direction: column;
+				gap: 0;
+			}
+			nav .dropdown:hover .dropdown-menu {
+				display: block !important;
+			}
+			.dropdown-menu li {
+				list-style: none;
+			}
+			.dropdown-menu a {
+				display: block;
+				padding: 0.75rem 1.5rem;
+				color: white;
+				white-space: nowrap;
+			}
+			.dropdown-menu a:hover {
+				background: #2a3342;
+				color: #00A8E0;
+			}
+			.page-header {
+				background: linear-gradient(135deg, #004D6D 0%, #00A8E0 100%);
+				color: white;
+				padding: 4rem 0 3rem;
+				text-align: center;
+			}
+			.page-header h1 {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+			}
+			.page-header p {
+				font-size: 1.25rem;
+				opacity: 0.9;
+			}
+			.blog-section {
+				padding: 4rem 0;
+			}
+			.featured-post {
+				background: white;
+				border-radius: 12px;
+				overflow: hidden;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+				margin-bottom: 4rem;
+			}
+			.featured-badge {
+				background: #00A8E0;
+				color: white;
+				padding: 0.5rem 1rem;
+				display: inline-block;
+				font-weight: 600;
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.featured-content {
+				padding: 2.5rem;
+			}
+			.featured-post h2 {
+				font-size: 2rem;
+				color: #1a2332;
+				margin: 1rem 0;
+			}
+			.featured-post p {
+				font-size: 1.15rem;
+				color: #555;
+				margin-bottom: 2rem;
+				line-height: 1.7;
+			}
+			.read-more {
+				display: inline-block;
+				background: #00A8E0;
+				color: white;
+				padding: 0.875rem 2rem;
+				text-decoration: none;
+				border-radius: 5px;
+				font-weight: 600;
+				transition: background 0.3s;
+			}
+			.read-more:hover {
+				background: #0088C0;
+			}
+			.posts-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+				gap: 2rem;
+			}
+			.post-card {
+				background: white;
+				border-radius: 8px;
+				padding: 2rem;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+				transition: transform 0.3s, box-shadow 0.3s;
+			}
+			.post-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+			}
+			.post-date {
+				color: #00A8E0;
+				font-size: 0.9rem;
+				font-weight: 600;
+				margin-bottom: 0.5rem;
+			}
+			.post-card h3 {
+				font-size: 1.5rem;
+				color: #1a2332;
+				margin-bottom: 1rem;
+			}
+			.post-card p {
+				color: #666;
+				margin-bottom: 1.5rem;
+				line-height: 1.6;
+			}
+			.post-card a {
+				color: #00A8E0;
+				text-decoration: none;
+				font-weight: 600;
+				transition: color 0.3s;
+			}
+			.post-card a:hover {
+				color: #0088C0;
+			}
+			.section-title {
+				font-size: 2rem;
+				color: #1a2332;
+				margin-bottom: 2.5rem;
+				text-align: center;
+			}
+			footer {
+				background: #1a2332;
+				color: white;
+				padding: 2rem 0;
+				text-align: center;
+				margin-top: 4rem;
+			}
+			@media (max-width: 768px) {
+				.page-header h1 {
+					font-size: 2rem;
+				}
+				.featured-post h2 {
+					font-size: 1.5rem;
+				}
+				.posts-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav>
+					<a href="/" class="logo">
+						<img src="/profitflow-logo.png" alt="Profitflow Automation Agency" />
+					</a>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li class="dropdown">
+							<a href="#">Services</a>
+							<ul class="dropdown-menu">
+								<li><a href="/services/crm-marketing-automation">Custom Automated Workflows</a></li>
+								<li><a href="/services/customer-retention-systems">CRM-Based Automated Workflows</a></li>
+								<li><a href="/services/automated-customer-communication">Custom AI Agents</a></li>
+							</ul>
+						</li>
+						<li><a href="/solutions/fix-low-client-retention">Solutions</a></li>
+						<li><a href="/blog">Blog</a></li>
+						<li><a href="/case-studies">Case Studies</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="page-header">
+			<div class="container">
+				<h1>Automation & AI Insights</h1>
+				<p>Expert guides on business automation, AI agents, and customer retention</p>
+			</div>
+		</div>
+
+		<section class="blog-section">
+			<div class="container">
+				{featuredPost && (
+					<article class="featured-post">
+						<span class="featured-badge">Latest Post</span>
+						<div class="featured-content">
+							<h2>{featuredPost.title}</h2>
+							<p>{featuredPost.excerpt}</p>
+							<a href={`/blog/${featuredPost.slug}`} class="read-more">Read Full Article →</a>
+						</div>
+					</article>
+				)}
+
+				<h2 class="section-title">All Articles</h2>
+				<div class="posts-grid">
+					{otherPosts.map(post => (
+						<article class="post-card">
+							<div class="post-date">{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+							<h3>{post.title}</h3>
+							<p>{post.excerpt}</p>
+							<a href={`/blog/${post.slug}`}>Read More →</a>
+						</article>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<p>&copy; 2024 Profitflow Automation Agency. All rights reserved.</p>
+				<p style="margin-top: 1rem;">
+					<a href="/services/crm-marketing-automation" style="color: white; margin: 0 1rem;">Custom Workflows</a>
+					<a href="/services/customer-retention-systems" style="color: white; margin: 0 1rem;">CRM Automation</a>
+					<a href="/services/automated-customer-communication" style="color: white; margin: 0 1rem;">AI Agents</a>
+					<a href="/solutions/fix-low-client-retention" style="color: white; margin: 0 1rem;">Solutions</a>
+					<a href="/blog" style="color: white; margin: 0 1rem;">Blog</a>
+					<a href="/case-studies" style="color: white; margin: 0 1rem;">Case Studies</a>
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
