@@ -37,22 +37,18 @@ const description = "Discover the 5 critical threats facing small businesses in 
 				margin: 0 auto;
 				padding: 3rem 20px;
 			}
-			.urgency-badge {
-				background: #dc3545;
-				color: white;
-				padding: 0.75rem 1.5rem;
-				border-radius: 50px;
-				display: inline-block;
-				font-weight: 700;
-				font-size: 0.9rem;
-				margin-bottom: 2rem;
-				text-transform: uppercase;
-				letter-spacing: 0.5px;
-				animation: pulse 2s infinite;
-			}
-			@keyframes pulse {
-				0%, 100% { opacity: 1; }
-				50% { opacity: 0.8; }
+		.urgency-headline {
+			font-size: 2.5rem;
+			font-weight: 700;
+			color: #dc3545;
+			text-align: center;
+			margin-bottom: 1.5rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			line-height: 1.2;
+		}
+			.urgency-headline {
+				font-size: 1.75rem;
 			}
 			.headline {
 				font-size: 2.5rem;
@@ -160,6 +156,9 @@ const description = "Discover the 5 critical threats facing small businesses in 
 				font-size: 1.1rem;
 			}
 			@media (max-width: 768px) {
+			.urgency-headline {
+				font-size: 1.75rem;
+			}
 				.headline {
 					font-size: 2rem;
 				}
@@ -180,9 +179,7 @@ const description = "Discover the 5 critical threats facing small businesses in 
 		</header>
 
 		<div class="landing-container">
-			<div style="text-align: center;">
-				<span class="urgency-badge">⚡ Critical Information for 2026</span>
-			</div>
+		<h2 class="urgency-headline">⚡ CRITICAL INFORMATION FOR 2026 ⚡</h2>
 
 			<h1 class="headline">
 				Why Most Small Businesses <span class="headline-highlight">Won't Survive 2026</span> (And How to Make Sure Yours Does)
